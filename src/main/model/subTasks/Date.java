@@ -23,9 +23,16 @@ public class Date {
 		return this.day;
 	}
 
-//	public int compareTwoDate(Date d1, Date d2) {
-//		if (d1.year > d2.)
-//	}
-
+	// if d1 is later than or equal to d2, it is true
+	public static boolean compareTwoDate(Date d1, Date d2) {
+		if (d1.year > d2.year) {
+			return true;
+		} else if (d1.year == d2.year && d1.month > d2.month) {
+			return true;
+		} else if (d1.year == d2.year && d1.month == d2.month && d1.day >= d2.day) {
+			return true;
+		}
+		return false;
+	}
 
 }
