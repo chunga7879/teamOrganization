@@ -1,5 +1,12 @@
 package main.model;
 
+import main.model.skills.Hardware;
+import main.model.skills.Network;
+import main.model.skills.Research;
+import main.model.skills.Software;
+import main.model.subTasks.Date;
+
+import java.util.ArrayList;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -12,8 +19,8 @@ public class Project {
 	int minNumTeamMembers;
 	int maxNumTeamMembers;
 	int numHoursRequired;
-	DateFormat startDate;
-	DateFormat endDate;
+	Date startDate;
+	Date endDate;
 
 	/* constructor */
 	public Project(String name) {
@@ -35,7 +42,7 @@ public class Project {
 		this.numHoursRequired = hours;
 	}
 
-	public void setStartDate(DateFormat start, DateFormat end) {
+	public void setStartDate(Date start, Date end) {
 		this.startDate = start;
 		this.endDate = end;
 	}

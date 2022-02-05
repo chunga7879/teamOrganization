@@ -12,6 +12,10 @@ public class SkillTest {
 
 		System.out.println(employee.getAvailableSkills().get(0).info());
 
+		employee.addSchedule(10, 5, 12, 7);
+
+		System.out.println(employee.getAvailableSchedules().get(0).startDate.month);
+
 	}
 
 } 
