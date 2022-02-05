@@ -49,7 +49,7 @@ public class Employee {
         return set;
     }
 
-    public Software addSoftwareEngineeringSkill(boolean oop, boolean web, boolean app, boolean UX, boolean testing) {
+    public Software addSoftwareSkill(boolean oop, boolean web, boolean app, boolean UX, boolean testing) {
         Software set = new Software();
         set.changeBasedOn(oop, web, app, UX, testing);
         availableSkills.add(set);
