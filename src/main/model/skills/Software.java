@@ -2,15 +2,15 @@ package main.model.skills;
 
 import main.model.SkillSet;
 
-public class SoftwareEngineering extends SkillSet {
+public class Software extends SkillSet {
 	boolean objectOrientedProgramming = false;
 	boolean	webDevelopment = false;
 	boolean appDevelopment = false;
 	boolean UXdesign = false;
 	boolean testing = false;
 
-	public SoftwareEngineering() {
-		super("Hardware");
+	public Software() {
+		super("Software");
 	}
 
 	public void changeobjectOrientedProgrammingTrue() {
@@ -41,3 +41,5 @@ public class SoftwareEngineering extends SkillSet {
 		if (testing) changeTestingTrue();
 	}
 }
+
+

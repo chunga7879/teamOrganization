@@ -3,7 +3,6 @@ package main.model.skills;
 import main.model.SkillSet;
 
 public class Network extends SkillSet {
-
 	boolean dataScience = false;
 	boolean machineLearning = false;
 	boolean protocol = false;
@@ -35,5 +34,4 @@ public class Network extends SkillSet {
 			changeProtocolTrue();
 		}
 	}
-
 }

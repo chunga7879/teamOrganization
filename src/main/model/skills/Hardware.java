@@ -3,11 +3,11 @@ package main.model.skills;
 import main.model.SkillSet;
 
 public class Hardware extends SkillSet {
+
 	boolean pcbDesign = false;
 	boolean signalProcessing = false;
 	boolean CAD = false;
 	boolean simulation = false;
-	boolean matlab = false;
 
 	public Hardware() {
 		super("Hardware");
@@ -25,15 +25,12 @@ public class Hardware extends SkillSet {
 		this.CAD = true;
 	}
 
-	public void changeSimulationXTrue() {
+	public void changeSimulationTrue() {
 		this.simulation = true;
 	}
 
-	public void changeMatlabTrue() {
-		this.matlab = true;
-	}
 
-	public void changeBasedOn(boolean pcbDesign, boolean signalProcessing, boolean CAD, boolean simulation, boolean matlab) {
+	public void changeBasedOn(boolean pcbDesign, boolean signalProcessing, boolean CAD, boolean simulation) {
 		if (pcbDesign) {
 			changePcbDesignTrue();
 		}
@@ -44,10 +41,7 @@ public class Hardware extends SkillSet {
 			changeCADTrue();
 		}
 		if (simulation) {
-			changeSimulationXTrue();
-		}
-		if (matlab) {
-			changeMatlabTrue();
+			changeSimulationTrue();
 		}
 	}
 

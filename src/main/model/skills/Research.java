@@ -3,9 +3,9 @@ package main.model.skills;
 import main.model.SkillSet;
 
 public class Research extends SkillSet {
-	boolean sourceChecking;
-	boolean journalResearch;
-	boolean dataCollection;
+	boolean sourceChecking = false;
+	boolean journalResearch = false;
+	boolean dataCollection = false;
 
 
 	public Research() {
@@ -16,7 +16,7 @@ public class Research extends SkillSet {
 		this.sourceChecking = true;
 	}
 
-	public void changeJournallResearchTrue() {
+	public void changeJournalResearchTrue() {
 		this.journalResearch = true;
 	}
 
@@ -29,10 +29,11 @@ public class Research extends SkillSet {
 			changeSourceCheckingTrue();
 		}
 		if (journalResearch) {
-			changeJournallResearchTrue();
+			changeJournalResearchTrue();
 		}
 		if (dataCollection) {
 			changeDataCollectionTrue();
 		}
 	}
+
 }
