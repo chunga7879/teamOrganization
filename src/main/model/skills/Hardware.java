@@ -1,8 +1,15 @@
+package main.model.skills;
+
+import main.model.SkillSet;
+
+import java.util.*;
+
 public class Hardware extends SkillSet {
-	boolean pcbDesign = false;
-	boolean signalProcessing = false;
-	boolean CAD = false;
-    boolean simulation = false;
+
+	public boolean pcbDesign = false;
+	public boolean signalProcessing = false;
+	public boolean CAD = false;
+	public boolean simulation = false;
 
 	public Hardware() {
 		super("Hardware");
@@ -20,7 +27,7 @@ public class Hardware extends SkillSet {
 		this.CAD = true;
 	}
 
-    public void changeSimulationTrue() {
+	public void changeSimulationTrue() {
 		this.simulation = true;
 	}
 
@@ -35,9 +42,23 @@ public class Hardware extends SkillSet {
 		if (CAD) {
 			changeCADTrue();
 		}
-        if (simulation) {
+		if (simulation) {
 			changeSimulationTrue();
-		}		
+		}
 	}
 
+	@Override
+	public List<String> info() {
+		String s1 = "pcbDesign: " + pcbDesign;
+		String s2 = "signalProcessing: " + signalProcessing;
+		String s3 = "CAD: " + CAD;
+		String s4 = "simulation: " + simulation;
+
+		List<String> list = new ArrayList<>();
+		list.add(s1);
+		list.add(s2);
+		list.add(s3);
+		list.add(s4);
+		return list;
+	}
 }
