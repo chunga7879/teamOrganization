@@ -15,5 +15,12 @@ public abstract class SkillSet {
 	// for checking the information
 	public abstract List<String> info();
 
+	public boolean compareWithOtherSet(SkillSet s) {
+		if (this.skillName.equals(s.skillName)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 
 }
