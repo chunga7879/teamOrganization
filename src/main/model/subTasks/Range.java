@@ -1,8 +1,8 @@
 package main.model.subTasks;
 
 public class Range {
-	Date startDate;
-	Date endDate;
+	public Date startDate;
+	public Date endDate;
 
 	public Range(int startMonth, int startDay, int endMonth, int endDay) {
 		startDate = new Date(startMonth, startDay);

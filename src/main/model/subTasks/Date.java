@@ -2,9 +2,9 @@ package main.model.subTasks;
 
 public class Date {
 
-	int year = 2022;
-	int month;
-	int day;
+	public int year = 2022;
+	public int month;
+	public int day;
 
 	public Date(int month, int day) {
 		this.month = month;
