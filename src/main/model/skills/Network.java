@@ -2,6 +2,9 @@ package main.model.skills;
 
 import main.model.SkillSet;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Network extends SkillSet {
 	boolean dataScience = false;
 	boolean machineLearning = false;
@@ -33,5 +36,18 @@ public class Network extends SkillSet {
 		if (Protocol) {
 			changeProtocolTrue();
 		}
+	}
+
+	@Override
+	public List<String> info() {
+		String s1 = "dataScience: " + dataScience;
+		String s2 = "machineLearning: " + machineLearning;
+		String s3 = "protocol: " + protocol;
+
+		List<String> list = new ArrayList<>();
+		list.add(s1);
+		list.add(s2);
+		list.add(s3);
+		return list;
 	}
 }

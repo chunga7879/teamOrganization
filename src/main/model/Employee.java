@@ -19,29 +19,40 @@ public class Employee {
         availableSkills = new ArrayList<>();
     }
 
-    public void addHardwareSkill(boolean pcbDesign, boolean signalProcessing, boolean CAD, boolean simulation) {
+    // SKILLS
+    public List<SkillSet> getAvailableSkills() {
+        return this.availableSkills;
+    }
+
+    public Hardware addHardwareSkill(boolean pcbDesign, boolean signalProcessing, boolean CAD, boolean simulation) {
         Hardware set = new Hardware();
         set.changeBasedOn(pcbDesign, signalProcessing, CAD, simulation);
         availableSkills.add(set);
+        return set;
     }
 
-    public void addResearchSkill(boolean DataScience, boolean MachineLearning, boolean Protocol) {
+    public Network addResearchSkill(boolean DataScience, boolean MachineLearning, boolean Protocol) {
         Network set = new Network();
         set.changeBasedOn(DataScience, MachineLearning, Protocol);
         availableSkills.add(set);
+        return set;
     }
 
-    public void addNetworkSkill(boolean sourceChecking, boolean journalResearch, boolean dataCollection) {
+    public Research addNetworkSkill(boolean sourceChecking, boolean journalResearch, boolean dataCollection) {
         Research set = new Research();
         set.changeBasedOn(sourceChecking, journalResearch, dataCollection);
         availableSkills.add(set);
+        return set;
     }
 
-    public void addSoftwareEngineeringSkill(boolean oop, boolean web, boolean app, boolean UX, boolean testing) {
+    public Software addSoftwareEngineeringSkill(boolean oop, boolean web, boolean app, boolean UX, boolean testing) {
         Software set = new Software();
         set.changeBasedOn(oop, web, app, UX, testing);
         availableSkills.add(set);
+        return set;
     }
+
+    //
 
 
 }
