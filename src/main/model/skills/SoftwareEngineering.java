@@ -1,18 +1,43 @@
-public class SoftwareEngineering {
-    boolean java;
-	boolean kotlin;
-	boolean cplusplus;
-	boolean c;
-	boolean chash;
-	boolean python;
-	boolean js;
-	boolean embeddedSoftware;
-	boolean linux;
-	boolean html;
-	boolean css;
-	boolean xml;
-	boolean groovy;
-	boolean redux;
-	boolean vueJS;
-	boolean jQuery;
+package main.model.skills;
+
+import main.model.SkillSet;
+
+public class SoftwareEngineering extends SkillSet {
+	boolean objectOrientedProgramming = false;
+	boolean	webDevelopment = false;
+	boolean appDevelopment = false;
+	boolean UXdesign = false;
+	boolean testing = false;
+
+	public SoftwareEngineering() {
+		super("Hardware");
+	}
+
+	public void changeobjectOrientedProgrammingTrue() {
+		this.objectOrientedProgramming = true;
+	}
+
+	public void changeWebDevelopmentTrue() {
+		this.webDevelopment = true;
+	}
+
+	public void changeAppDevelopmentTrue() {
+		this.appDevelopment = true;
+	}
+
+	public void changeUXdesignTrue() {
+		this.UXdesign = true;
+	}
+
+	public void changeTestingTrue() {
+		this.testing = true;
+	}
+
+	public void changeBasedOn(boolean oop, boolean web, boolean app, boolean UX, boolean testing) {
+		if (oop) changeobjectOrientedProgrammingTrue();
+		if (web) changeWebDevelopmentTrue();
+		if (app) changeAppDevelopmentTrue();
+		if (UX) changeUXdesignTrue();
+		if (testing) changeTestingTrue();
+	}
 }
