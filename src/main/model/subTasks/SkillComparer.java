@@ -1,25 +1,30 @@
 package main.model;
 
 import java.util.List;
+import main.model.SkillSet;
 
 public class SkillComparer {
 
 	public int numMatchingSkills(Project project, Employee employee) {
         
         int count = 0;
-        List<String> availableSkill = employee.getAvailableSkills;
-        List<String> requiredSkill = project.getSkillSetRequired;
+        List<SkillSet> availableSkill = employee.getAvailableSkills;
+        List<SkillSet> requiredSkill = project.getSkillSetRequired;
 
         for (int i = 0; i < requiredSkill.size(); i++) {
+            String reqName = requiredSkill.get(i).getSkillName();
             for (int j = 0; j < availableSkill.size(); j++) {
-                if (requiredSkill[i].skillName.equals("Hardware")) {
-                    count += compareHardware(requiredSkill[i], availableSkill[j]);
-                } else if (requiredSkill[i].skillName.equals("Software")) {
-                    count += compareSoftware(requiredSkill[i], availableSkill[j]);
-                } else if (requiredSkill[i].skillName.equals("Network")) {
-                    count += compareNetwork(requiredSkill[i], availableSkill[j]);
-                } else if (requiredSkill[i].skillName.equals("Research")) {
-                    count += compareResearch(requiredSkill[i], availableSkill[j]);
+                String avalName = availableSkill.get(j).getSkillName();
+                if (reqName.equals(avalName)) {
+                    if (reqName.equals("Hardware")) {
+                        count += compareHardware(requiredSkill.get(i), availableSkill.get(j));
+                    } else if (reqName.equals("Software")) {
+                        count += compareSoftware(requiredSkill.get(i), availableSkill.get(j));
+                    } else if (reqName.equals("Network")) {
+                        count += compareNetwork(requiredSkill.get(i), availableSkill.get(j));
+                    } else if (reqName.equals("Research")) {
+                        count += compareResearch(requiredSkill.get(i), availableSkill.get(j));
+                    }
                 }
             }
         }
