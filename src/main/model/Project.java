@@ -28,6 +28,16 @@ public class Project {
 		skillSetRequired = new ArrayList<>();
 	}
 
+	public Project(String name, int min, int max, int hours, Date start, Date end) {
+		this.projectName = name;
+		this.skillSetRequired = new ArrayList<>();
+		this.minNumTeamMembers = min;
+		this.maxNumTeamMembers = max;
+		this.numHoursRequired = hours;
+		this.startDate = start;
+		this.endDate = end;
+	}
+
 	/* set members */
 	public void setNumTeamMembers(int min, int max) {
 		this.minNumTeamMembers = min;
