@@ -3,15 +3,31 @@ package main.model.skills;
 import main.model.SkillSet;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Network extends SkillSet {
 	boolean dataScience = false;
+
 	boolean machineLearning = false;
 	boolean protocol = false;
 
 	public Network() {
 		super("Network");
+	}
+
+
+	public boolean isDataScience() {
+		return dataScience;
+	}
+
+	public boolean isMachineLearning() {
+		return machineLearning;
+	}
+
+	public boolean isProtocol() {
+		return protocol;
 	}
 
 	public void changeDataScienceTrue() {
@@ -50,4 +66,15 @@ public class Network extends SkillSet {
 		list.add(s3);
 		return list;
 	}
+
+
+	@Override
+	public Map<String, Boolean> returnMap() {
+		Map<String, Boolean> maps = new HashMap<>();
+		maps.put("dataScience", dataScience);
+		maps.put("machineLearning", machineLearning);
+		maps.put("protocol", protocol);
+
+		return maps;
+	};
 }

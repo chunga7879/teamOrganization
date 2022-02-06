@@ -3,7 +3,9 @@ package main.model.skills;
 import main.model.SkillSet;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Software extends SkillSet {
 	boolean objectOrientedProgramming = false;
@@ -11,6 +13,26 @@ public class Software extends SkillSet {
 	boolean appDevelopment = false;
 	boolean UXdesign = false;
 	boolean testing = false;
+
+	public boolean isObjectOrientedProgramming() {
+		return objectOrientedProgramming;
+	}
+
+	public boolean isWebDevelopment() {
+		return webDevelopment;
+	}
+
+	public boolean isAppDevelopment() {
+		return appDevelopment;
+	}
+
+	public boolean isUXdesign() {
+		return UXdesign;
+	}
+
+	public boolean isTesting() {
+		return testing;
+	}
 
 	public Software() {
 		super("Software");
@@ -61,6 +83,18 @@ public class Software extends SkillSet {
 		list.add(s5);
 		return list;
 	}
+
+	@Override
+	public Map<String, Boolean> returnMap() {
+		Map<String, Boolean> maps = new HashMap<>();
+		maps.put("objectOrientedProgramming", objectOrientedProgramming);
+		maps.put("webDevelopment", webDevelopment);
+		maps.put("appDevelopment", appDevelopment);
+		maps.put("UXdesign", UXdesign);
+		maps.put("testing", testing);
+
+		return maps;
+	};
 }
 
 
