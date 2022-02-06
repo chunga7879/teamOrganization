@@ -14,7 +14,6 @@ import java.util.Map;
 public class Project {
 	// unique name
 	String projectName;
-	String description;
 
 	List<SkillSet> skillSetRequired;
 	int minNumTeamMembers;
@@ -30,10 +29,6 @@ public class Project {
 	}
 
 	/* set members */
-	public void setDescription(String desc) {
-		this.description = desc;
-	}
-
 	public void setNumTeamMembers(int min, int max) {
 		this.minNumTeamMembers = min;
 		this.maxNumTeamMembers = max;
@@ -51,6 +46,19 @@ public class Project {
 	/* skills */
 	public List<SkillSet> getSkillSetRequired() {
 		return this.skillSetRequired;
+	}
+
+	public List<String> getSkillNames() {
+		List<String> names = new ArrayList<>();
+		
+		for (SkillSet rs : this.skillSetRequired) {
+			Map<String, Boolean> rsm = rs.returnMap();
+			for (String rsmKey : rsm.keySet()) {
+				names.add(rsmKey);
+			}
+		}
+
+		return names;
 	}
 
 	public Hardware addHardwareSkill(boolean pcbDesign, boolean signalProcessing, boolean CAD, boolean simulation) {

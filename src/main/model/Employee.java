@@ -1,5 +1,6 @@
 package main.model;
 
+import database.DBConnection;
 import main.model.skills.Hardware;
 import main.model.skills.Network;
 import main.model.skills.Research;
@@ -7,10 +8,13 @@ import main.model.skills.Software;
 //import main.model.subTasks.Date;
 import main.model.subTasks.Range;
 
+import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class Employee {
+
     String employeeName;
     String email;
     List<SkillSet> availableSkills;
@@ -27,6 +31,19 @@ public class Employee {
     public List<SkillSet> getAvailableSkills() {
         return this.availableSkills;
     }
+
+    public List<String> getSkillNames() {
+		List<String> names = new ArrayList<>();
+		
+		for (SkillSet as : this.availableSkills) {
+			Map<String, Boolean> asm = as.returnMap();
+			for (String asmKey : asm.keySet()) {
+				names.add(asmKey);
+			}
+		}
+		
+		return names;
+	}
 
     public Hardware addHardwareSkill(boolean pcbDesign, boolean signalProcessing, boolean CAD, boolean simulation) {
         Hardware set = new Hardware();
