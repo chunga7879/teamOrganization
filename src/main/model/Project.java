@@ -8,6 +8,7 @@ import main.model.subTasks.Date;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ArrayList;
 
 public class Project {
 	// unique name
