@@ -14,7 +14,6 @@ import java.util.Map;
 public class Project {
 	// unique name
 	String projectName;
-	String description;
 
 	List<SkillSet> skillSetRequired;
 	int minNumTeamMembers;
@@ -30,9 +29,9 @@ public class Project {
 	}
 
 	/* set members */
-	public void setDescription(String desc) {
-		this.description = desc;
-	}
+//	public void setDescription(String desc) {
+//		this.description = desc;
+//	}
 
 	public void setNumTeamMembers(int min, int max) {
 		this.minNumTeamMembers = min;
@@ -115,5 +114,13 @@ public class Project {
 		}
 		return count;
 	}
+
+//	public boolean checkAllInRequirement(List<SkillSet> skillSets) {
+//		for (SkillSet rs : skillSetRequired) {
+//			for (SkillSet employees : skillSets) {
+//				Map<String, Boolean> em = e.returnMap();
+//				Map<String, Boolean> rsm = rs.returnMap();
+//			}
+//	}
 
 }
