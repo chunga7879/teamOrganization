@@ -1,0 +1,31 @@
+git .main {
+    position: relative;
+    margin-top: 150px;
+}
+
+.main > .inner {
+    height: 800px;
+    position: relative;
+}
+
+.main .kinds {
+    position: absolute;
+    height: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    list-style-type: none;
+    text-align: center;
+
+}
+
+.main .material-icons {
+    height: 24px;
+    font-size: 150px;
+}
+
+.main li {
+    margin: 50px;
+    width: 200px;
+}
