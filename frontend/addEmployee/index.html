@@ -38,34 +38,126 @@
                 <span class="material-icons">badge</span>
                 <label>NAME:</label><br>
 			    <input type="text" id="name"><br>
-
+                <input type="submit">
             </li>
+
             <li>
                 <span class="material-icons">email</span>
                 <label>EMAIL:</label><br>
 			    <input type="text" id="email"><br>
+                <input type="submit">
             </li>
+
             <li>
                 <span class="material-icons">schedule</span>
-                <label>AVAILABLE TIMES:</label><br>
-			    <input type="text" id="times"><br>
+                <label>AVAILABLE TIMES:</label><br><br>
+
+                <form action="/action_page.php">
+                    <label for="startDate">Start Date:</label>
+                    <input type="date" id="startDate" name="startDate">
+                    <input type="submit"><br><br>
+                </form>
+                
+                <form action="/action_page.php">
+                    <label for="endDate">End Date:</label>
+                    <input type="date" id="endDate" name="endDate">
+                    <input type="submit">
+                </form>
             </li>
+
             <li>
                 <span class="material-icons">build</span>
-                <label>SKILLSET:</label><br>
-			    <input type="text" id="skills"><br>
+                <label>CHOOSE SKILLS:</label><br/><br/>
 
-                <div class="hardware">
+                <div class="skillset">
+                    <div class="hardware">
+                        <label>Hardware Skills:</label><br/><br/>
 
-                </div>
-                <div class="software">
+                        <label class="container">PCB Design
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                        </label>
+                      
+                        <label class="container">Signal Processing
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                      
+                        <label class="container">CAD
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        
+                        <label class="container">Simulation
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
 
-                </div>
-                <div class="network">
+                    <div class="software">
+                        <label>Software Skills:</label><br/><br/>
 
-                </div>
-                <div class="research">
+                        <label class="container">Object Oriented Programming
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                        </label>
+                        
+                        <label class="container">Web Development
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        
+                        <label class="container">App Development
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        
+                        <label class="container">UX Design
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
 
+                        <label class="container">Testing
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="network">
+                        <label>Network Skills:</label><br/><br/>
+
+                        <label class="container">Data Science
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        
+                        <label class="container">Machine Learning
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="container">Protocol
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="research">
+                        <label>Research Skills:</label><br/><br/>
+
+                        <label class="container">Source Checking
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        
+                        <label class="container">Journal Research
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="container">Data Collection
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
                 </div>
             </li>
         </ui>
