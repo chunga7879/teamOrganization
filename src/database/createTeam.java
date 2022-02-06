@@ -13,8 +13,19 @@ public class createTeam {
 
 	public createTeam(String teamName) {
 		this.teamName = teamName;
+
 	}
 
+	public void addEmployee(Employee e) {
+		this.employeeList.add(e);
+	}
 
+	public int countNumSkills() {
+		int count = 0;
+		for (Employee e : employeeList) {
+			count += project.numMatchingSkills(e);
+		}
+		return count;
+	}
 
 }
