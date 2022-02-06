@@ -3,7 +3,9 @@ package main.model.skills;
 import main.model.SkillSet;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Research extends SkillSet {
 	boolean sourceChecking = false;
@@ -13,6 +15,18 @@ public class Research extends SkillSet {
 
 	public Research() {
 		super("Research");
+	}
+
+	public boolean isSourceChecking() {
+		return sourceChecking;
+	}
+
+	public boolean isJournalResearch() {
+		return journalResearch;
+	}
+
+	public boolean isDataCollection() {
+		return dataCollection;
 	}
 
 	public void changeSourceCheckingTrue() {
@@ -51,5 +65,15 @@ public class Research extends SkillSet {
 		list.add(s3);
 		return list;
 	}
+
+	@Override
+	public Map<String, Boolean> returnMap() {
+		Map<String, Boolean> maps = new HashMap<>();
+		maps.put("sourceChecking", sourceChecking);
+		maps.put("journalResearch", journalResearch);
+		maps.put("dataCollection", dataCollection);
+
+		return maps;
+	};
 
 }

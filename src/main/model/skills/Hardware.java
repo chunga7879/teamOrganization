@@ -11,6 +11,22 @@ public class Hardware extends SkillSet {
 	public boolean CAD = false;
 	public boolean simulation = false;
 
+	public boolean isPcbDesign() {
+		return pcbDesign;
+	}
+
+	public boolean isSignalProcessing() {
+		return signalProcessing;
+	}
+
+	public boolean isCAD() {
+		return CAD;
+	}
+
+	public boolean isSimulation() {
+		return simulation;
+	}
+
 	public Hardware() {
 		super("Hardware");
 	}
@@ -61,4 +77,17 @@ public class Hardware extends SkillSet {
 		list.add(s4);
 		return list;
 	}
+
+	@Override
+	public Map<String, Boolean> returnMap() {
+		Map<String, Boolean> maps = new HashMap<>();
+		maps.put("pcbDesign", pcbDesign);
+		maps.put("signalProcessing", signalProcessing);
+		maps.put("CAD", CAD);
+		maps.put("simulation", simulation);
+
+		return maps;
+	};
+
+
 }
