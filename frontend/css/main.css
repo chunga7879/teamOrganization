@@ -1,11 +1,14 @@
 .main {
     position: relative;
     margin-top: 150px;
+    background-color: lightgoldenrodyellow;
 }
 
 .main > .inner {
     height: 800px;
     position: relative;
+    background-color: palegoldenrod;
+
 }
 
 .main .kinds {

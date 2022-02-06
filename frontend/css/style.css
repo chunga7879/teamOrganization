@@ -11,6 +11,7 @@ body {
     font-weight: 400;
     line-height: 1.4;
     color: #333;
+    /*background-color: #ffd700;*/
 }
 
 .inner {
@@ -24,14 +25,16 @@ header {
     position: fixed;
     top: 0;
     z-index: 9;
-    background-color: #F6F5F0;
+    background-color: lightblue;
     border-bottom: 1px solid #c8c8c8;
 }
+
 header > .inner {
     height: 187px;
     display: flex;
     align-items: center;
 }
+
 header .logo {
     position: absolute;
     top: 0;
