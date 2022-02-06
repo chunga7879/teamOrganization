@@ -5,10 +5,11 @@ import main.model.skills.Network;
 import main.model.skills.Research;
 import main.model.skills.Software;
 import main.model.subTasks.Date;
+import main.model.subTasks.Range;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.ArrayList;
+import java.util.Map;
 
 public class Project {
 	// unique name
@@ -48,7 +49,7 @@ public class Project {
 	}
 
 	/* skills */
-	public List getSkillSetRequired() {
+	public List<SkillSet> getSkillSetRequired() {
 		return this.skillSetRequired;
 	}
 
@@ -79,4 +80,40 @@ public class Project {
         skillSetRequired.add(set);
         return set;
     }
+
+	public boolean checkAvailability(Employee employee) {
+		Range projectRange = new Range(this.startDate, this.endDate);
+
+		for (Range r : employee.availableSchedules) {
+			if (Range.compareTwoRange(projectRange, r)) {
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	public int numMatchingSkills(Employee employee) {
+
+		int count = 0;
+		List<SkillSet> availableSkill = employee.getAvailableSkills();
+
+		for (SkillSet e : availableSkill) {
+			for (SkillSet rs : skillSetRequired) {
+				Map<String, Boolean> em = e.returnMap();
+				Map<String, Boolean> rsm = rs.returnMap();
+				for (String emKey : em.keySet()) {
+					for (String rsmKey : rsm.keySet()) {
+						if (emKey.equals(rsmKey) && em.get(emKey) == rsm.get(rsmKey)) {
+							count++;
+						}
+					}
+				}
+
+			}
+
+		}
+		return count;
+	}
+
 }
