@@ -7,6 +7,8 @@ import java.util.*;
 public class Hardware extends SkillSet {
 
 	public boolean pcbDesign = false;
+
+	
 	public boolean signalProcessing = false;
 	public boolean CAD = false;
 	public boolean simulation = false;
