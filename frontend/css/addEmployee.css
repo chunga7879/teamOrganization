@@ -1,4 +1,4 @@
-git .main {
+.main {
     position: relative;
     margin-top: 150px;
 }
@@ -10,6 +10,7 @@ git .main {
 
 .main .kinds {
     position: absolute;
+    top: 0;
     height: 800px;
     display: flex;
     flex-wrap: wrap;
