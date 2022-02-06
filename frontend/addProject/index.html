@@ -6,6 +6,7 @@
 
     <title>BC HACKS - Team Organization</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+    <link rel="icon" type="image/png" href="..\images\bulb.png"/>
 
     <link href="../css/style.css" rel="stylesheet" />
     <link href="../css/addProject.css" rel="stylesheet" />
@@ -30,8 +31,160 @@
     </div>
 </header>
 
-<section>
 
+    <section class="main">
+        <div class="inner">
+            <ui class="kinds">
+                <li>
+                    <a href="#">
+                        <span class="material-icons">groups</span><br><br>
+                        <label>PROJECT NAME:</label><br>
+                        <input type="text" id="id"><br>
+    
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="material-icons">fingerprint</span><br><br>
+                        <label>PROJECT ID:</label><br>
+                        <input type="text" id="id"><br>
+    
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="material-icons">notes</span><br><br>
+                        <label>DESCRIPTION:</label><br>
+                        <input type="text" id="id"><br>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="material-icons">groups</span><br><br>
+                        <label>MAX NUMBER OF EMPLOYEES:</label><br>
+                        <input type="text" id="id"><br>
+                        <label>MIN NUMBER OF EMPLOYEES:</label><br>
+                        <input type="text" id="id"><br>
+                    </a>
+                </li>
+
+                <li>
+                    <span class="material-icons">schedule</span><br><br>
+                    <label>REQUIRED TIMES:</label><br>
+    
+                    <form action="/action_page.php">
+                        <label for="startDate">Start Date:</label>
+                        <input type="date" id="startDate" name="startDate">
+                        <input type="submit"><br>
+                    </form>
+                    
+                    <form action="/action_page.php">
+                        <label for="endDate">End Date:</label>
+                        <input type="date" id="endDate" name="endDate">
+                        <input type="submit">
+                    </form>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="material-icons">build</span><br><br>
+                        <label>SKILLS REQUIRED:</label><br><br>
+                        
+                        <div class="skillset">
+                            <div class="hardware">
+                                <label>Hardware Skills:</label><br/><br/>
+        
+                                <label class="container">PCB Design
+                                    <input type="checkbox" checked="checked">
+                                    <span class="checkmark"></span>
+                                </label>
+                              
+                                <label class="container">Signal Processing
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                              
+                                <label class="container">CAD
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                
+                                <label class="container">Simulation
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+        
+                            <div class="software">
+                                <label>Software Skills:</label><br/><br/>
+        
+                                <label class="container">Object Oriented Programming
+                                    <input type="checkbox" checked="checked">
+                                    <span class="checkmark"></span>
+                                </label>
+                                
+                                <label class="container">Web Development
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                
+                                <label class="container">App Development
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                
+                                <label class="container">UX Design
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+        
+                                <label class="container">Testing
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="network">
+                                <label>Network Skills:</label><br/><br/>
+        
+                                <label class="container">Data Science
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                
+                                <label class="container">Machine Learning
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+        
+                                <label class="container">Protocol
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="research">
+                                <label>Research Skills:</label><br/><br/>
+        
+                                <label class="container">Source Checking
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                
+                                <label class="container">Journal Research
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+        
+                                <label class="container">Data Collection
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ui>
+        </div>
+    
 </section>
 
 <footer>
@@ -48,6 +201,8 @@
 
     </div>
 </footer>
+
+
 
 </body>
 
