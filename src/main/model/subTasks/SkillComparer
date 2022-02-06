@@ -1,0 +1,60 @@
+package main.model;
+
+import java.util.List;
+
+public class SkillComparer {
+
+	public int skillComparer(Project project, Employee employee) {
+        
+        int numMatchingSkills = 0;
+        List<String> availableSkillCategory = employee.getAvailableSkills;
+        List<String> requiredSkillCategory = project.getSkillSetRequired;
+
+        for (i = 0, i < requiredSkillSet.size(), i++) {
+            
+            for (j = 0, i < availableSkills.size(), j++) {
+                
+                if (availableSkillSet[j] == requiredSkillSet[i]){
+                    
+                    if (availableSkillCategory[j] == Hardware) {
+                        compareSkillSets(availableSkillCategory[j].pcbDesign, requiredSkillSet[j].pcbDesign)
+                        compareSkillSets(availableSkillCategory[j].signalProcessing, requiredSkillSet[j].signalProcessing)
+                        compareSkillSets(availableSkillCategory[j].CAD, requiredSkillSet[j].CAD)
+                        compareSkillSets(availableSkillCategory[j].simulation, requiredSkillSet[j].simulation)
+                    }
+
+                    if (availableSkillCategory[j] == Software) {
+                        compareSkillSets(availableSkillCategory[j].objectOrientedProgramming, requiredSkillSet[j].objectOrientedProgramming)
+                        compareSkillSets(availableSkillCategory[j].webDevelopment, requiredSkillSet[j].webDevelopment)
+                        compareSkillSets(availableSkillCategory[j].appDevelopment, requiredSkillSet[j].appDevelopment)
+                        compareSkillSets(availableSkillCategory[j].UXdesign, requiredSkillSet[j].UXdesign)
+                        compareSkillSets(availableSkillCategory[j].testing, requiredSkillSet[j].testing)
+                    }
+
+                    if (availableSkillCategory[j] == Network) {
+                        compareSkillSets(availableSkillCategory[j].dataScience, requiredSkillSet[j].dataScience)
+                        compareSkillSets(availableSkillCategory[j].machineLearning, requiredSkillSet[j].machineLearning)
+                        compareSkillSets(availableSkillCategory[j].protocol, requiredSkillSet[j].protocol)
+                    }
+
+                    if (availableSkillCategory[j] == Research) {
+                        compareSkillSets(availableSkillCategory[j].sourceChecking, requiredSkillSet[j].sourceChecking)
+                        compareSkillSets(availableSkillCategory[j].journalResearch, requiredSkillSet[j].journalResearch)
+                        compareSkillSets(availableSkillCategory[j].dataCollection, requiredSkillSet[j].dataCollection)
+                    }
+                }
+            }
+        }
+    return numMatchingSkills;
+    }
+
+        
+	public void countMatchingSkillSets(numMatchingSkills, SkillSet s1, SkillSet s2) {
+        if (s1.skillName.equals(s2.skillName)) {
+		    numMatchingSkills += numMatchingSkills;
+		} else {
+			break;
+		}
+	}
+}
+}
