@@ -32,7 +32,6 @@ git .main {
     width: 200px;
 }
 
-
 .main .skillset {
     margin-top: 150px;
     position: relative;
@@ -41,9 +40,9 @@ git .main {
     align-content: center;
     list-style-type: none;
     text-align: left;
-    overflow-y: visible;
-    overflow-x: visible;
 }
+
+.skillSetSpan::before { content: '\A'; white-space: pre; }
 
 .main .hardware {
     margin-right: 80px;
