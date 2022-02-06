@@ -4,6 +4,8 @@ import main.model.skills.Hardware;
 import main.model.skills.Network;
 import main.model.skills.Research;
 import main.model.skills.Software;
+import main.model.subTasks.Date;
+import main.model.subTasks.Range;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,11 +14,13 @@ public class Employee {
     String employeeName;
     String email;
     List<SkillSet> availableSkills;
+    List<Range> availableSchedules;
 
     public Employee(String employeeName, String email) {
         this.employeeName = employeeName;
         this.email = email;
         availableSkills = new ArrayList<>();
+        availableSchedules = new ArrayList<>();
     }
 
     // SKILLS
@@ -45,14 +49,21 @@ public class Employee {
         return set;
     }
 
-    public Software addSoftwareEngineeringSkill(boolean oop, boolean web, boolean app, boolean UX, boolean testing) {
+    public Software addSoftwareSkill(boolean oop, boolean web, boolean app, boolean UX, boolean testing) {
         Software set = new Software();
         set.changeBasedOn(oop, web, app, UX, testing);
         availableSkills.add(set);
         return set;
     }
 
-    //
+    // shedule Setting
+    public void addSchedule(int startMonth, int startDay, int endMonth, int endDay) {
+        Range range = new Range(startMonth, startDay, endMonth, endDay);
+        availableSchedules.add(range);
+    }
 
+    public List<Range> getAvailableSchedules() {
+        return this.availableSchedules;
+    }
 
 }
