@@ -9,7 +9,7 @@ public class JDBC {
     public static Connection getConnection() throws Exception {
         try {
             String driver = "com.mysql.jdbc.Driver";
-            String url = "jdbc:mysql://localhost:3306/employee";
+            String url = "jdbc:mysql://localhost:3306/?user=root";
             String username = "root";
             String password = "Qlqjsanjgkwl1?";
             Class.forName(driver);
