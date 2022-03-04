@@ -16,11 +16,11 @@ public class TeamTest {
 		createTeam cTeam = new createTeam("Team 1");
 		cTeam.addEmployee();
 
-		System.out.println(employee.getAvailableSkills().get(0).info());
+		System.out.println();
 
 		cTeam.countNumSkills();
 
-		System.out.println(employee.getAvailableSchedules().get(0).startDate.month);
+		System.out.println();
 	}
 
 } 
